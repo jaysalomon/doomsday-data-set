@@ -63,3 +63,15 @@ Do not infer DDS suitability from a generic aggregate benchmark alone.
 Keep changes scoped. Explain what changed, why it matters, and how it was checked.
 
 Where a change affects the corpus format, runtime boundary, validation rules or other architectural commitments, update the relevant design document as part of the same pull request.
+
+
+## Licensing of contributions
+
+DDS uses a split licence model:
+
+- contributions to software, machine-readable schemas and tooling are expected to be provided under **Apache-2.0**;
+- contributions to documentation and DDS-authored data/content are expected to be provided under **CC BY 4.0**.
+
+By intentionally submitting a contribution for inclusion in the project, you are representing that you have the right to provide it under the applicable project licence, unless a different arrangement is explicitly agreed before inclusion.
+
+Do not submit third-party material under the DDS licence if you do not have the right to relicense it. Preserve source-level provenance and licensing information for any external material used in a pack or benchmark.
