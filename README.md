@@ -89,8 +89,14 @@ DDS is particularly interested in work on:
 
 See the [collaboration brief](docs/09-collaboration-brief.md) for the concrete questions and interfaces.
 
-## Licensing and source rights
+## Licence and attribution
 
-DDS source acquisition and redistribution must follow the rights of each underlying source. Compiled packs therefore need explicit provenance and licensing metadata at pack and item level.
+DDS is deliberately permissive: use, modification, redistribution and commercial use are allowed, but attribution is retained.
 
-A repository-wide software/data licence has **not yet been declared** here. That decision should be made explicitly before releasing code or compiled corpus artefacts beyond documentation.
+- **Software, schemas and build tooling:** Apache License 2.0.
+- **DDS-authored documentation, specifications, benchmark/task content and compiled data/content:** Creative Commons Attribution 4.0 International (CC BY 4.0).
+- **Requested attribution:** **Doomsday Data Set (DDS), by Julien Pierre Salomon**, with a link to this repository where reasonably practical.
+
+See [LICENSE.md](LICENSE.md) and [NOTICE](NOTICE) for the exact scope and attribution notice.
+
+Third-party source material keeps its original copyright and licence. DDS does not relicense books, manuals, papers, standards, images, datasets, models or other material that its contributors do not own. Released packs must therefore carry explicit provenance and rights metadata.
