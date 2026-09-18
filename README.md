@@ -43,6 +43,7 @@ For that reason DDS will benchmark model families and compression methods agains
 
 - [Model adaptation and compression](docs/08-model-adaptation-and-compression.md)
 - [Evaluation and benchmarking](docs/07-evaluation-and-benchmarking.md)
+- [Proposed DDS × Bonsai evaluation](docs/10-bonsai-evaluation-proposal.md)
 
 ## Repository map
 
@@ -56,7 +57,9 @@ For that reason DDS will benchmark model families and compression methods agains
 - [Evaluation and benchmarking](docs/07-evaluation-and-benchmarking.md) — task families, metrics and comparison methodology.
 - [Model adaptation and compression](docs/08-model-adaptation-and-compression.md) — how specialist post-training and ultra-low-bit inference fit DDS.
 - [Collaboration brief](docs/09-collaboration-brief.md) — what DDS can offer research and systems collaborators.
+- [Proposed DDS × Bonsai evaluation](docs/10-bonsai-evaluation-proposal.md) — a concrete collaboration/benchmark plan for ternary 27B-class inference.
 - [Roadmap](ROADMAP.md) — staged path from specification to reproducible prototype.
+- [Contributing](CONTRIBUTING.md) — contribution scope, evidence standards and source-rights expectations.
 
 ## First implementation target
 
