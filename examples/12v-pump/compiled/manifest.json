@@ -1,0 +1,22 @@
+{
+  "dds_pack_format": "reference-0.1",
+  "pack_id": "dds.reference.12v-pump",
+  "title": "Synthetic 12 V circulation pump reference",
+  "version": "1.0.0",
+  "status": "reference-example",
+  "generated_by": "manual-reference-authoring",
+  "source_ids": [
+    "DDS-EX-PUMP-001"
+  ],
+  "objects": [
+    "components.json",
+    "topology.json",
+    "procedure.yaml",
+    "provenance.json"
+  ],
+  "claims": {
+    "production_compiler_output": false,
+    "production_release_pack": false
+  },
+  "licence": "CC-BY-4.0"
+}

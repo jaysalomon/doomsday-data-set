@@ -1,0 +1,41 @@
+{
+  "graph_id": "SYS-PUMP-01-ELECTRICAL",
+  "directed": true,
+  "edges": [
+    {
+      "from": "B1.positive",
+      "to": "F27.input",
+      "relation": "supplies"
+    },
+    {
+      "from": "F27.output",
+      "to": "K3.30",
+      "relation": "supplies"
+    },
+    {
+      "from": "K3.30",
+      "to": "K3.87",
+      "relation": "connected_when_relay_energised"
+    },
+    {
+      "from": "K3.87",
+      "to": "P1.positive",
+      "relation": "supplies"
+    },
+    {
+      "from": "P1.negative",
+      "to": "G104",
+      "relation": "grounds_to"
+    },
+    {
+      "from": "IGNITION_SWITCHED_POSITIVE",
+      "to": "K3.86",
+      "relation": "supplies"
+    },
+    {
+      "from": "K3.85",
+      "to": "ECU.low_side_output",
+      "relation": "controlled_ground"
+    }
+  ]
+}

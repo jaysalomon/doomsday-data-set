@@ -1,0 +1,43 @@
+{
+  "system": {
+    "id": "SYS-PUMP-01",
+    "nominal_voltage_v": 12
+  },
+  "components": [
+    {
+      "id": "B1",
+      "type": "battery",
+      "label": "12 V battery",
+      "nominal_voltage_v": 12
+    },
+    {
+      "id": "F27",
+      "type": "fuse",
+      "label": "Pump supply fuse",
+      "rating_a": 15
+    },
+    {
+      "id": "K3",
+      "type": "relay",
+      "label": "Circulation pump relay",
+      "terminals": ["30", "85", "86", "87"]
+    },
+    {
+      "id": "P1",
+      "type": "electric_pump",
+      "label": "Auxiliary circulation pump",
+      "nominal_voltage_v": 12
+    },
+    {
+      "id": "G104",
+      "type": "ground_point",
+      "label": "Chassis ground G104"
+    },
+    {
+      "id": "ECU",
+      "type": "controller",
+      "label": "Electronic control unit",
+      "control": "low-side relay coil control"
+    }
+  ]
+}

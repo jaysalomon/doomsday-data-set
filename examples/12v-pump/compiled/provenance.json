@@ -1,0 +1,51 @@
+{
+  "source": {
+    "id": "DDS-EX-PUMP-001",
+    "path": "../source.md",
+    "revision": "1.0",
+    "licence": "CC-BY-4.0",
+    "synthetic": true
+  },
+  "claims": [
+    {
+      "claim_id": "C-F27-RATING",
+      "object": "F27.rating_a",
+      "value": 15,
+      "source_locator": "Circuit description, paragraph 2"
+    },
+    {
+      "claim_id": "C-K3-SUPPLY",
+      "object": "topology:F27.output->K3.30",
+      "source_locator": "Circuit description, paragraph 2"
+    },
+    {
+      "claim_id": "C-K3-PUMP",
+      "object": "topology:K3.87->P1.positive",
+      "source_locator": "Circuit description, paragraph 2"
+    },
+    {
+      "claim_id": "C-P1-GROUND",
+      "object": "topology:P1.negative->G104",
+      "source_locator": "Circuit description, paragraph 3"
+    },
+    {
+      "claim_id": "C-P1-VOLTAGE-RANGE",
+      "object": "procedure:S3.branches[0].condition",
+      "value": {
+        "min": 11.5,
+        "max": 14.8,
+        "unit": "V"
+      },
+      "source_locator": "Expected values table + Diagnostic procedure step 4"
+    },
+    {
+      "claim_id": "C-G104-DROP",
+      "object": "procedure:LOAD_SIDE.ground_voltage_drop",
+      "value": {
+        "max": 0.5,
+        "unit": "V"
+      },
+      "source_locator": "Expected values table"
+    }
+  ]
+}
