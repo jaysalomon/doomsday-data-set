@@ -30,7 +30,7 @@
     },
     {
       "claim_id": "C-P1-VOLTAGE-RANGE",
-      "object": "procedure:S3.expected_voltage",
+      "object": "procedure:S3.branches[0].condition",
       "value": {
         "min": 11.5,
         "max": 14.8,
