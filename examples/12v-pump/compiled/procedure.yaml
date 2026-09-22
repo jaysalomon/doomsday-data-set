@@ -1,0 +1,64 @@
+id: PROC-P1-NO-RUN
+title: Diagnose P1 circulation pump not running
+source: DDS-EX-PUMP-001
+preconditions:
+  - pump_command_available
+steps:
+  - id: S1
+    action: Confirm P1 is commanded on.
+    on_pass: S2
+
+  - id: S2
+    action: Inspect F27 and verify continuity.
+    expected:
+      continuity: closed
+    on_pass: S3
+    on_fail: REPAIR_F27_OR_UPSTREAM
+
+  - id: S3
+    action: Measure voltage across P1 while P1 is commanded on.
+    measurement:
+      quantity: voltage
+      unit: V
+    branches:
+      - condition: 11.5 <= measured_voltage <= 14.8
+        next: LOAD_SIDE
+      - condition: measured_voltage < 11.5
+        next: S4
+
+  - id: LOAD_SIDE
+    action: Inspect P1 connector, verify G104 under load, and test P1.
+    checks:
+      - quantity: ground_voltage_drop
+        expected: "< 0.5 V"
+    interpretation: Supply is present at the load; prioritise load and ground-path diagnosis.
+
+  - id: S4
+    action: Measure K3 terminal 87 to ground while K3 is commanded on.
+    branches:
+      - condition: 11.5 <= measured_voltage <= 14.8
+        next: WIRING_K3_TO_P1
+      - condition: measured_voltage < 11.5
+        next: S5
+
+  - id: WIRING_K3_TO_P1
+    action: Inspect wiring between K3 terminal 87 and P1.
+    interpretation: Relay output is present but load supply is low.
+
+  - id: S5
+    action: Measure K3 terminal 30 to ground.
+    branches:
+      - condition: 11.5 <= measured_voltage <= 14.8
+        next: TEST_K3_CONTROL
+      - condition: measured_voltage < 11.5
+        next: REPAIR_F27_OR_UPSTREAM
+
+  - id: TEST_K3_CONTROL
+    action: Test relay K3 and its control circuit.
+
+  - id: REPAIR_F27_OR_UPSTREAM
+    action: Inspect F27 and the upstream supply path.
+
+guardrails:
+  - Do not infer K3 or P1 failure from relay sound alone.
+  - Use measured voltage and voltage drop to isolate the fault.
